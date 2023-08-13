@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../../assets/logo.png'
+
 
 const Header = () => {
 
@@ -14,7 +14,7 @@ const Header = () => {
     
        <>
         <li><Link to ='/dashboard'>Dashboard</Link></li>
-        <li><button onClick={handleLogOut}>Logout</button></li>
+        <li><Link onClick={handleLogOut}>Logout</Link></li>
        </>
      
         <li><Link to ='/login'>Login</Link></li>       
@@ -33,7 +33,7 @@ const Header = () => {
                        {menuItems}
                     </ul>
                 </div>
-                <Link to='/' className="btn btn-ghost normal-case text-xl"><img src={logo} alt='' />SellHub</Link>
+                <Link to='/' className="btn btn-ghost normal-case text-center text-xl text-primary font-bold"><img  alt='' />SELL HUB</Link>
             </div>
 
             <div className="navbar-end mx-10 hidden lg:flex">
