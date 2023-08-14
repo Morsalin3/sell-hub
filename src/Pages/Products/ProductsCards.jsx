@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React from 'react';
-import { toast } from 'react-hot-toast';
+import {toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 
 const ProductsCards = ({product}) => {
@@ -22,6 +22,7 @@ const ProductsCards = ({product}) => {
         })
             .then((res) => {
                 const data = res.data;
+                // console.log('data',data)
                 if (data.acknowledged) {
                     toast.success("Added to Cards");
                 } else {
