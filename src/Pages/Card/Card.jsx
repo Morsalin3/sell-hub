@@ -6,7 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 const Card = () => {
     // const [cards, setCards] = useState([]);
 
-    const url = 'http://localhost:5000/cards'
+    const url = 'https://sell-hub-server.vercel.app/cards'
 
     const { data: cards = [], isLoading, refetch } = useQuery({
         queryKey: ['carts'],
@@ -16,7 +16,7 @@ const Card = () => {
             return data;
         }
     });
-
+        console.log("added cards",cards)
 
     return (
     <div className='my-8 grid gap-4 grid-cols w-2/4 m-auto'>

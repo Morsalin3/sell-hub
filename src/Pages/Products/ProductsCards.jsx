@@ -15,7 +15,7 @@ const ProductsCards = ({product}) => {
             price
         }
         console.log(cartData)
-        axios.post("http://localhost:5000/cards", cartData, {
+        axios.post("https://sell-hub-server.vercel.app/cards", cartData, {
             headers: {
                 "content-type": "application/json",
             }

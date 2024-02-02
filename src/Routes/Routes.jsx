@@ -33,7 +33,7 @@ import Card from "../Pages/Card/Card";
     {
         path: '/products/:id',
         element: <ProductsDetails />,
-        loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
+        loader: ({ params }) => fetch(`https://sell-hub-server.vercel.app/product/${params.id}`)
     },
     {
         path: '/card',

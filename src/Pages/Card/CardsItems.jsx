@@ -8,7 +8,7 @@ const CardsItems = ({ card, refetch }) => {
 
     const deleteCard=(id) =>{
         axios
-        .delete(`http://localhost:5000/cards/${id}`)
+        .delete(`https://sell-hub-server.vercel.app/cards/${id}`)
         .then((res) => {
             const data = res.data;
             if (data.deletedCount > 0) {
@@ -23,7 +23,9 @@ const CardsItems = ({ card, refetch }) => {
 
     return (
         <div className="card card-side bg-base-100 shadow-xl">
-            <figure><img src={image} alt="Movie" className='w-2/4' /></figure>
+           <div className='w-48'>
+           <figure><img src={image} alt="Movie" className='w-96'/></figure>
+           </div>
             <div className="card-body">
                 <h2 className="card-title line-clamp-1">{productName}</h2>
                 <h3 className='font-medium'>{category}</h3>
